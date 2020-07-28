@@ -1,8 +1,13 @@
-# Nextcloud on Heroku
+# Nextcloud Heroku Buildpack
 
-Deploy your own [Nextcloud](https://nextcloud.com) instance on [Heroku](https://heroku.com).
+This is a [Heroku Buildpack](https://devcenter.heroku.com/articles/buildpacks)
+for running a Minecraft server in a [dyno](https://devcenter.heroku.com/articles/dynos).
 
-## Docker Compose
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+## Installation
+
+### Via Docker Compose
 
 Use `docker-compose` to deploy Nextcloud locally:
 
@@ -12,11 +17,11 @@ docker-compose up -d
 open http://localhost:8000
 ```
 
-## Heroku
+### Via Heroku
 
 Follow the instructions on Heroku's [Container Registry & Runtime](https://devcenter.heroku.com/articles/container-registry-and-runtime) for creating a new heroku app.
 
-### MySQL Add-on
+#### MySQL Add-on
 
 Add a MySQL add-on to your app. This will contain your Nextcloud backend.
 
@@ -49,7 +54,7 @@ heroku config:set NEXTCLOUD_ADMIN_PASSWORD=<password>
 heroku config:set NEXTCLOUD_ADMIN_USER=<user>
 ```
 
-### Deploy
+#### Deploy
 
 Login to the Heroku container registry:
 
