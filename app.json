@@ -6,6 +6,12 @@
     "management",
     "nextcloud"
   ],
+  "addons": [{
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
+  }],
   "repository": "https://github.com/denzuko-forked/nextcloud-heroku",
   "env": {
     "NGROK_API_TOKEN": {
